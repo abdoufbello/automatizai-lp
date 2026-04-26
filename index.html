@@ -2,7 +2,8 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#020305" />
   <title>Automatiz AI — Processos, Automação e Agentes IA</title>
   <meta name="description" content="Sessão estratégica para mapear gargalos, desenhar automações e criar agentes IA para escalar atendimento, vendas e operação." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -705,47 +706,98 @@
 
     @media (max-width: 900px) {
       .nav-links { display: none; }
-      .hero { min-height: auto; padding-top: 48px; }
+      .nav-inner { height: 64px; }
+      .hero { min-height: auto; padding: 44px 0 64px; }
       .dash-grid { grid-template-columns: 1fr 1fr; }
       .chart-card { grid-column: 1 / -1; }
       .tech-item { min-width: 132px; height: 56px; }
-      .split, .booking-flow, .calendar-card, .footer-grid { grid-template-columns: 1fr; }
+      .split, .booking-flow, .calendar-card, .footer-grid { grid-template-columns: 1fr; gap: 28px; }
       .cal-left { border-right: 0; border-bottom: 1px solid rgba(148,163,184,.10); }
       .steps { grid-template-columns: 1fr; }
       .photo-grid { grid-template-columns: 1fr; }
-      .photo-grid img, .photo-grid img:first-child, .photo-grid img:last-child { height: 420px; }
+      .photo-grid img, .photo-grid img:first-child, .photo-grid img:last-child { height: 360px; }
       .footer-links { justify-content: start; }
+      section { padding: 64px 0; }
+      .offer { padding: 70px 0; }
+      .booking-card, .booking-panel { padding: 22px; }
+      .booking-top h3 { font-size: 22px; }
+      .lead-form { padding: 24px; }
+      .mini-card { padding: 20px; }
+      .stat b { font-size: 26px; }
+      .metric strong { font-size: 22px; }
+      .about-image { height: 360px; }
+      .value-grid { grid-template-columns: 1fr; }
+      h1::after { inset: 8% 4% auto 4%; }
+      [data-parallax] { transform: none !important; }
     }
     @media (max-width: 600px) {
       .container { width: min(100% - 22px, var(--max)); }
-      .brand { font-size: 18px; }
-      h1 { font-size: 45px; }
-      .hero-sub { font-size: 15px; }
+      .brand { font-size: 17px; gap: 8px; }
+      .brand-mark { width: 30px; height: 30px; font-size: 13px; }
+      h1 { font-size: clamp(34px, 11vw, 48px); letter-spacing: -.06em; }
+      h2 { font-size: clamp(28px, 8vw, 40px) !important; letter-spacing: -.05em; }
+      .hero-sub { font-size: 15px; line-height: 1.65; }
+      .price-note { font-size: 13px; }
+      .pill-btn { font-size: 13.5px; padding: 0 16px; min-height: 46px; }
+      .pill-btn.primary, .pill-btn.green { width: 100%; }
+      .nav .pill-btn { width: auto; padding: 0 14px; }
+      .hero-actions { flex-direction: column; align-items: stretch; gap: 10px; }
+      .hero-actions a { width: 100%; }
       .dashboard { transform: none; padding: 10px; }
-      .dash-grid, .form-grid, .value-grid, .automation-stats, .social-proof, .slot-grid { grid-template-columns: 1fr; }
-      .metric strong { font-size: 21px; }
-      .tech-item { min-width: 118px; height: 52px; padding: 0 16px; font-size: 14px; }
-      .tech-track { animation-duration: 30s; }
-      section { padding: 62px 0; }
-      .lead-form { padding: 22px; }
-      .copyright { flex-direction: column; }
+      .dash-grid, .form-grid, .value-grid, .automation-stats, .social-proof, .slot-grid, .confirmation-form { grid-template-columns: 1fr; }
+      .metric, .chart-card, .bar-card { padding: 14px; }
+      .metric strong { font-size: 22px; }
+      .chart-card strong, .bar-card strong { font-size: 30px !important; }
+      .tech-item { min-width: 116px; height: 50px; padding: 0 14px; font-size: 13px; gap: 8px; }
+      .tech-track { animation-duration: 28s; gap: 10px; }
+      section { padding: 56px 0; }
+      .offer { padding: 60px 0; }
+      .lead-form { padding: 20px; border-radius: 22px; }
+      .booking-panel, .booking-card { padding: 18px; border-radius: 22px; }
+      .booking-summary { gap: 8px; }
+      .summary-item { padding: 12px; font-size: 14px; }
+      .selected-box { font-size: 13px; padding: 12px; }
+      .soft-warning { font-size: 12px; padding: 11px 12px; }
+      .copyright { flex-direction: column; gap: 8px; }
+      .footer-grid { padding-bottom: 26px; }
+      .step { padding: 18px; }
+      .step h3 { font-size: 18px; }
+      .audit-list li { gap: 12px; font-size: 14px; }
+      .photo-grid img, .photo-grid img:first-child, .photo-grid img:last-child { height: 280px; }
+      .scroll-progress { height: 2px; }
+      .iframe-action-bar { padding: 14px; }
+      .form-title { font-size: 18px; }
+      .confirmation-form input, .confirmation-form textarea { padding: 12px; font-size: 16px; }
+      input, select, textarea { font-size: 16px; }
+    }
+    @media (max-width: 400px) {
+      .container { width: min(100% - 18px, var(--max)); }
+      h1 { font-size: clamp(30px, 10vw, 38px); }
+      h2 { font-size: clamp(26px, 7.5vw, 34px) !important; }
+      .eyebrow { font-size: 11px; padding: 7px 11px; }
+      .section-kicker { font-size: 10px; padding: 6px 10px; }
+      .pill-btn { font-size: 13px; min-height: 44px; }
+      .booking-top { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .booking-top h3 { font-size: 20px; }
+      .month-controls { align-self: stretch; justify-content: flex-end; }
     }
 
     .google-iframe-shell {
       position: relative;
       min-height: 720px;
       border-radius: 28px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.18);
+      background: #ffffff;
       overflow: hidden;
-      box-shadow: 0 28px 90px rgba(0,0,0,.45);
+      box-shadow: 0 28px 90px rgba(0,0,0,.45), 0 0 0 1px rgba(96,165,250,.18);
     }
     .google-iframe-shell iframe {
       width: 100%;
       height: 720px;
       border: 0;
       display: block;
-      background: #0f0f10;
+      background: #ffffff;
+      color-scheme: light only;
     }
     .iframe-action-bar {
       display: grid;
@@ -753,15 +805,16 @@
       gap: 14px;
       align-items: center;
       padding: 16px;
-      border-top: 1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.42);
-      backdrop-filter: blur(16px);
+      border-top: 1px solid rgba(15,23,42,.08);
+      background: linear-gradient(180deg, #f8fafc, #e2e8f0);
+      color: #0f172a;
     }
     .iframe-action-bar p {
       margin: 0;
-      color: var(--muted);
+      color: #334155;
       font-size: 13px;
       line-height: 1.5;
+      font-weight: 600;
     }
     .confirmation-form {
       display: grid;
@@ -819,9 +872,12 @@
       line-height: 1.55;
     }
     @media (max-width: 760px) {
-      .google-iframe-shell, .google-iframe-shell iframe { min-height: 680px; height: 680px; }
+      .google-iframe-shell, .google-iframe-shell iframe { min-height: 640px; height: 640px; }
       .iframe-action-bar { grid-template-columns: 1fr; }
       .confirmation-form { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .google-iframe-shell, .google-iframe-shell iframe { min-height: 580px; height: 580px; }
     }
 
   </style>
@@ -1059,7 +1115,8 @@
                 title="Agenda Automatiz AI - Google Calendar"
                 src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ITxHuPq3n4R-MY6rCs8GDkUwO9euK_G_1C6tIqUNElXj7ZKvi4XstH1WP2Mu_blI83SgxjAHJ?gv=true"
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
+                referrerpolicy="no-referrer-when-downgrade"
+                style="color-scheme: light only; background:#fff;">
               </iframe>
               <div class="iframe-action-bar">
                 <p>Após escolher o horário no calendário acima, clique para continuar. Se o iframe pedir login/permissão, use o link alternativo da agenda oficial.</p>
