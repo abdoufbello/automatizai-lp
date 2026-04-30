@@ -143,13 +143,14 @@
     h1 {
       font-size: clamp(48px, 8vw, 96px);
       line-height: .92;
-      letter-spacing: -.085em;
+      letter-spacing: -.06em;
       margin: 0 auto 22px;
       max-width: 980px;
       font-weight: 950;
       text-wrap: balance;
       position: relative;
       filter: drop-shadow(0 14px 40px rgba(96,165,250,.18));
+      padding: 0 .15em;
     }
     h1::after {
       content: "";
@@ -162,6 +163,9 @@
       pointer-events: none;
     }
     .gradient-text {
+      display: inline-block;
+      padding-right: .08em;
+      margin-right: -.04em;
       background: linear-gradient(90deg, #93c5fd, #a78bfa 35%, #22c55e 65%, #a78bfa 85%, #93c5fd);
       background-size: 220% 100%;
       -webkit-background-clip: text;
@@ -972,7 +976,7 @@
         <h1 class="reveal">Escale sua operação com <span class="gradient-text">sistemas de IA</span></h1>
         <p class="hero-sub reveal" data-reveal-delay="120">Descubra onde sua empresa está perdendo tempo, leads e dinheiro. Na sessão estratégica, mapeamos seus gargalos e desenhamos uma arquitetura de automação para atendimento, vendas, processos internos e acompanhamento por dados.</p>
         <div class="hero-actions reveal" data-reveal-delay="220">
-          <a class="pill-btn primary" href="#sessao">Agendar sessão estratégica — R$1.500</a>
+          <a class="pill-btn primary" href="#sessao">Agendar sessão estratégica</a>
           <a class="pill-btn" href="#diagnostico">Ver como funciona</a>
         </div>
         <div class="price-note reveal" data-reveal-delay="320">Entrega prática: mapa de oportunidades + desenho dos fluxos + plano de implementação priorizado.</div>
